@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECH स्पर्धा - Where Innovation Meets Robotics</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loader">
+        <div class="loader-content">
+            <div class="robot-loader">  
+                <div class="robot-head"></div>
+                <div class="robot-body"></div>
+                <div class="robot-arms"></div>
+            </div>
+            <h2>Initializing Techस्पर्धा...</h2>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Techस्पर्धा</h2>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="events.html" class="nav-link">Events</a></li>
+                <li><a href="team.html" class="nav-link">Team</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="particles-container" id="particles"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-glow">TECH</span>
+                <span class="title-glow cyan">स्पर्धा</span>
+            </h1>
+            <p class="hero-subtitle">Where Innovation Meets Robotics</p>
+            <div class="hero-buttons">
+                <a href="events.html" class="btn btn-primary glow-btn">
+                    <i class="fas fa-rocket"></i> Explore Events
+                </a>
+                <a href="#register" class="btn btn-secondary glow-btn">
+                    <i class="fas fa-user-plus"></i> Register Now
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <!-- <i class="fas fa-chevron-down"></i> -->
+        </div>
+    </section>
+
+
+     <!-- Countdown Section -->
+    <section class="countdown reveal" id="countdown">
+        <div class="container">
+            <h2 class="section-title">Event Countdown</h2>
+            <div class="countdown-container" id="countdown-timer">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="days">00</span>
+                    <span class="countdown-label">Days</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">00</span>
+                    <span class="countdown-label">Hours</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">00</span>
+                    <span class="countdown-label">Minutes</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">00</span>
+                    <span class="countdown-label">Seconds</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about reveal" id="about">
+        <div class="container">
+            <h2 class="section-title">About TECH स्पर्धा</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Welcome to TECH स्पर्धा, the ultimate inter-school robotics competition that brings together the brightest young minds in technology and innovation. Experience cutting-edge robotics battles, autonomous challenges, and creative showcases that push the boundaries of what's possible.</p>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <h3>20+</h3>
+                            <p>Teams Competing</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>5+</h3>
+                            <p>Events</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>500+</h3>
+                            <p>Participants</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlights Section -->
+    <section class="highlights reveal" id="highlights">
+        <div class="container">
+            <h2 class="section-title">Event Highlights</h2>
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <i class="fas fa-route highlight-icon"></i>
+                    <h3>Line Follower Race</h3>
+                    <p>Test your bot's precision on complex tracks</p>
+                </div>
+                <div class="highlight-card">
+                    <i class="fas fa-futbol highlight-icon"></i>
+                    <h3>Robo Soccer</h3>
+                    <p>AI-powered soccer with autonomous robots</p>
+                </div>
+                <div class="highlight-card">
+                    <i class="fas fa-fire highlight-icon"></i>
+                    <h3>Robo War</h3>
+                    <p>Battle arena for combat robots</p>
+                </div>
+                <div class="highlight-card">
+                    <i class="fas fa-lightbulb highlight-icon"></i>
+                    <h3>Innovation Expo</h3>
+                    <p>Showcase your creative robotics projects</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-robot"></i> TECH स्पर्धा</h3>
+                    <p>The premier inter-school robotics competition</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TECH स्पर्धा. All rights reserved. | Made with <i class="fas fa-heart glow-text"></i> for robotics</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
