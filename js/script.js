@@ -231,6 +231,24 @@ function createParticles() {
 createParticles();
 
 
+const dot = document.createElement("div");
+dot.classList.add("cursor-dot");
+
+const outline = document.createElement("div");
+outline.classList.add("cursor-outline");
+
+document.body.appendChild(dot);
+document.body.appendChild(outline);
+
+document.addEventListener("mousemove", (e) => {
+    dot.style.top = e.clientY + "px";
+    dot.style.left = e.clientX + "px";
+
+    outline.style.top = e.clientY + "px";
+    outline.style.left = e.clientX + "px";
+});
+
+
     // CONTACT FORM
     const contactForm = document.getElementById('contactForm');
 
