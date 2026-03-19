@@ -483,6 +483,14 @@ EVENTS PAGE
     -webkit-text-fill-color:transparent;
 }
 
+
+.team-photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top; /* default focus */
+}
+
 /* DESCRIPTION */
 .event-description{
     color:#bbb;
@@ -821,4 +829,23 @@ RESPONSIVE
 grid-template-columns:1fr;
 }
 
+}
+
+#particles{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.particle{
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: #00f7ff;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #00f7ff;
 }

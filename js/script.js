@@ -161,58 +161,74 @@ document.addEventListener('DOMContentLoaded', function () {
     startCountdown();
 
 
-    // =============================
-    // PARTICLE BACKGROUND
-    // =============================
+// =============================
+// UPWARD INTERACTIVE PARTICLES
+// =============================
 
-    function createParticles() {
+function createParticles() {
 
-        const particlesContainer = document.getElementById('particles');
+    const container = document.getElementById('particles');
+    if (!container) return;
 
-        if (!particlesContainer) return;
+    const particles = [];
+    const count = 100;
 
-        for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < count; i++) {
 
-            const particle = document.createElement('div');
+        const el = document.createElement('div');
+        el.className = 'particle';
 
-            particle.className = 'particle';
+        const particle = {
+            el: el,
+            x: Math.random() * window.innerWidth,
+            y: Math.random() * window.innerHeight,
+            speed: Math.random() * 0.7 + 0.3,
+        };
 
-            particle.style.left = Math.random() * 100 + '%';
-            particle.style.top = Math.random() * 100 + '%';
-
-            particle.style.animationDelay = Math.random() * 10 + 's';
-            particle.style.animationDuration = (Math.random() * 20 + 10) + 's';
-
-            particlesContainer.appendChild(particle);
-        }
-
+        container.appendChild(el);
+        particles.push(particle);
     }
 
+    let mouse = { x: 0, y: 0 };
 
-    const particleStyle = document.createElement('style');
+    window.addEventListener('mousemove', (e) => {
+        mouse.x = e.clientX;
+        mouse.y = e.clientY;
+    });
 
-    particleStyle.textContent = `
-    .particle{
-        position:absolute;
-        width:2px;
-        height:2px;
-        background:#00f7ff;
-        border-radius:50%;
-        animation:float linear infinite;
-        box-shadow:0 0 10px #00f7ff;
+    function animate() {
+
+        particles.forEach(p => {
+
+            // MOVE UPWARD
+            p.y -= p.speed;
+
+            if (p.y < 0) {
+                p.y = window.innerHeight;
+                p.x = Math.random() * window.innerWidth;
+            }
+
+            // MOUSE REPEL
+            const dx = p.x - mouse.x;
+            const dy = p.y - mouse.y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+
+            if (dist < 120) {
+                p.x += dx * 0.05;
+                p.y += dy * 0.05;
+            }
+
+            // APPLY POSITION
+            p.el.style.transform = `translate(${p.x}px, ${p.y}px)`;
+        });
+
+        requestAnimationFrame(animate);
     }
 
-    @keyframes float{
-        0%{transform:translateY(100vh);opacity:0;}
-        10%{opacity:1;}
-        90%{opacity:1;}
-        100%{transform:translateY(-100vh);opacity:0;}
-    }
-    `;
+    animate();
+}
 
-    document.head.appendChild(particleStyle);
-
-    createParticles();
+createParticles();
 
 
     // CONTACT FORM
