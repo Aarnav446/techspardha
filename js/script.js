@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (!daysEl || !hoursEl || !minutesEl || !secondsEl) return;
 
-        const eventDate = new Date(2026, 3, 19, 8, 0, 0).getTime(); 
+        const eventDate = new Date(2026, 3, 17, 8, 0, 0).getTime(); 
         // month index starts from 0 so 3 = April
 
         function updateCountdown() {
